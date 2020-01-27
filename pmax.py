@@ -1,17 +1,22 @@
 #!/usr/bin/env python3
 
 import glob
+import subprocess
 
-files = glob.glob("./PMAX/*")
+files = glob.glob("PMAX/*")
 for file in files:
     print(file)
-    str=file
-    print(file[14:12])
-    print(file[9:4])
-
+    print(len(file))
+    ppp='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    print(file[19:31])
+    print(file[14:18])
+#    print(ppp[14:15])
+#    print(ppp[9:4])
 #
 #
 # HHHHH
 #
+
+res = subprocess.Popen('dir', shell=True)
 
 

@@ -10,10 +10,10 @@ broker_address = "127.0.0.1"
 RedisHost = "127.0.0.1"
 Topic = "Pinky"
 
-files = glob.glob("./PMAX/*")
-for file in files:
-    print(file)
-    str=files
+#files = glob.glob("./PMAX/*")
+#or file in files:
+#    print(file)
+#   str=files
 
 r = redis.Redis(host=RedisHost, port='6379',db=3)
 #r = redis.Redis(host="redis-14787.c82.us-east-1-2.ec2.cloud.redislabs.com", port="14787", password="50T5RWVcwdpQrFXkq26rTxgQwc7Ru1c7")
@@ -26,10 +26,9 @@ def on_message(client, userdata, message):
     files = glob.glob("./PMAX/*")
     for file in files:
         print(file)
-        str=file
-        print(str[14:12])
-        print(str[9:4])
-        r.sadd(str[14:12], str[9:4])
+        print(file[19:31])
+        print(file[14:18])
+        r.sadd(file[19:31], file[14:18])
 #       r.sadd('KEY-h2', 'dateB', 'dataC', 'data6')
 #       r.sadd('KEY-h3', 'date11', 'data8', 'data999')
 #    r.set('RPIvalue',m)
