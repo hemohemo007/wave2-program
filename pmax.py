@@ -17,6 +17,14 @@ for file in files:
 # HHHHH
 #
 
-res = subprocess.Popen('dir', shell=True)
+res = subprocess.Popen('pmax.bat')
+print(res)
+
+f=open("SRP_1.data", "r")
+s=f.read()
+print(s)
+f.close()
+
+
 
 

@@ -4,8 +4,8 @@ import paho.mqtt.client as mqtt
 
 
 ###### Edit variables to your environment #######
-#broker_address = "test.mosquitto.org"     #MQTT broker_address
-broker_address = "127.0.0.1"     #MQTT broker_address
+broker_address = "test.mosquitto.org"     #MQTT broker_address
+#broker_address = "127.0.0.1"     #MQTT broker_address
 Topic = "Pinky"
 Msg = "Greetings from RPi !!!  Hello Pinky World"
 

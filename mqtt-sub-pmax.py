@@ -5,9 +5,9 @@ import time
 import redis
 import glob
 
-broker_address = "127.0.0.1"
-#broker_address = "test.mosquitto.org"
-RedisHost = "127.0.0.1"
+#broker_address = "127.0.0.1"
+broker_address = "test.mosquitto.org"
+#RedisHost = "127.0.0.1"
 Topic = "Pinky"
 
 #files = glob.glob("./PMAX/*")
@@ -15,8 +15,8 @@ Topic = "Pinky"
 #    print(file)
 #   str=files
 
-r = redis.Redis(host=RedisHost, port='6379',db=3)
-#r = redis.Redis(host="redis-14787.c82.us-east-1-2.ec2.cloud.redislabs.com", port="14787", password="50T5RWVcwdpQrFXkq26rTxgQwc7Ru1c7")
+#r = redis.Redis(host=RedisHost, port='6379',db=0)
+r = redis.Redis(host="redis-14787.c82.us-east-1-2.ec2.cloud.redislabs.com", port="14787", db=0,password="50T5RWVcwdpQrFXkq26rTxgQwc7Ru1c7")
 
 
 def on_message(client, userdata, message):
@@ -26,9 +26,9 @@ def on_message(client, userdata, message):
     files = glob.glob("./PMAX/*")
     for file in files:
         print(file)
-        print(file[19:31])
-        print(file[14:18])
-        r.sadd(file[19:31], file[14:18])
+        print(file[21:33])
+        print(file[16:20])
+        r.sadd(file[21:33], file[16:20])
 #       r.sadd('KEY-h2', 'dateB', 'dataC', 'data6')
 #       r.sadd('KEY-h3', 'date11', 'data8', 'data999')
 #    r.set('RPIvalue',m)
