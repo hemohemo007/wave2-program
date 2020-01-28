@@ -14,6 +14,8 @@ Topic = "C1_to_C2"
 def on_message(client, userdata, message):
     m = str(message.payload.decode("utf-8"))
     print("message received " + m)
+    srp = m.split()
+    print("=== Usable Capacity === Total : " + srp[10] + " TB  / Used : " + srp[11] + " %" )
 
 
 print("creating new instance")
