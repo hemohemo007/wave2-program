@@ -24,8 +24,8 @@ def loop():
        time.sleep(1)      
 
 if __name__ == '__main__':
-   print 'www.adeept.com'
-   line = " www.adeept.com "
+   print ('www.adeept.com')
+   line = " PowerMax BIN   "
    screen.enable_backlight()
    screen.clear()
    try:
